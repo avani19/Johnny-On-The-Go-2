@@ -1,13 +1,13 @@
 // In the configuration, we declare the layout, 404, loading,
 // navbar, and footer templates.
 Router.configure({
-  layoutTemplate: 'masterLayout',
+  layoutTemplate: 'map',
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
-  yieldTemplates: {
-    navbar: {to: 'navbar'},
-    footer: {to: 'footer'},
-  }
+  // yieldTemplates: {
+  //   navbar: {to: 'navbar'},
+  //   footer: {to: 'footer'},
+  // }
 });
 
 // In the map, we set our routes.
@@ -16,50 +16,50 @@ Router.map(function () {
   this.route('home', {
     path: '/',
     template: 'home',
-    layoutTemplate: 'masterLayout'
+    layoutTemplate: 'map'
   });
   this.route('loading', {
     path: 'loading',
     template: 'loading',
-    layoutTemplate: 'masterLayout'
+    layoutTemplate: 'map'
   });
   // User Mgmt Route
-  this.route('usermgmt', {
-    path: '/usermgmt',
-    template: 'userManagement',
-    layoutTemplate: 'masterLayout',
-    onBeforeAction: function() {
-      if (Meteor.loggingIn()) {
-          this.render(this.loadingTemplate);
-      } else if(!Roles.userIsInRole(Meteor.user(), ['admin'])) {
-          this.redirect('/');
-      }
-      this.next();
-    },
-    loadingTemplate: 'loading'
-  });
+  // this.route('usermgmt', {
+  //   path: '/usermgmt',
+  //   template: 'userManagement',
+  //   layoutTemplate: 'masterLayout',
+  //   onBeforeAction: function() {
+  //     if (Meteor.loggingIn()) {
+  //         this.render(this.loadingTemplate);
+  //     } else if(!Roles.userIsInRole(Meteor.user(), ['admin'])) {
+  //         this.redirect('/');
+  //     }
+  //     this.next();
+  //   },
+  //   loadingTemplate: 'loading'
+  // });
   // Sign In Route
-  AccountsTemplates.configureRoute('signIn', {
-      name: 'signin',
-      path: '/sign-in',
-      template: 'signIn',
-      layoutTemplate: 'masterLayout',
-      redirect: '/',
-  });
+  // AccountsTemplates.configureRoute('signIn', {
+  //     name: 'signin',
+  //     path: '/sign-in',
+  //     template: 'signIn',
+  //     layoutTemplate: 'masterLayout',
+  //     redirect: '/',
+  // });
   // Sign Up Route
-  AccountsTemplates.configureRoute('signUp', {
-      name: 'sign-up',
-      path: '/sign-up',
-      template: 'signUp',
-      layoutTemplate: 'masterLayout',
-      redirect: '/',
-  });
+  // AccountsTemplates.configureRoute('signUp', {
+  //     name: 'sign-up',
+  //     path: '/sign-up',
+  //     template: 'signUp',
+  //     layoutTemplate: 'masterLayout',
+  //     redirect: '/',
+  // });
   // Sign Out Route
-  this.route('/sign-out', function(){
-      Meteor.logout(function(err) {
-          if (err) alert('There was a problem logging you out.');
-          Router.go("/");
-      });
-      Router.go("/");
-  });
+  // this.route('/sign-out', function(){
+  //     Meteor.logout(function(err) {
+  //         if (err) alert('There was a problem logging you out.');
+  //         Router.go("/");
+  //     });
+  //     Router.go("/");
+  // });
 });
