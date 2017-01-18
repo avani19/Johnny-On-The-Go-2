@@ -23,6 +23,11 @@ Router.map(function () {
     template: 'loading',
     layoutTemplate: 'masterLayout'
   });
+  // this.route('profile',{
+  //   path: '/profile',
+  //   template: 'profile',
+  //   layoutTemplate: ''
+  // })
   // User Mgmt Route
   this.route('usermgmt', {
     path: '/usermgmt',
@@ -44,7 +49,7 @@ Router.map(function () {
       path: '/sign-in',
       template: 'signIn',
       layoutTemplate: 'masterLayout',
-      redirect: '/',
+      redirect: '/profile',
   });
   // Sign Up Route
   AccountsTemplates.configureRoute('signUp', {
