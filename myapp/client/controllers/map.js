@@ -29,8 +29,17 @@ if (Meteor.isClient) {
   var MAP_ZOOM = 15;
 
   Meteor.startup(function() {
-    GoogleMaps.load();
+    GoogleMaps.load({key: "AIzaSyAm5g1m-LfYFn6tCoxvwjYBDjgVN2dTTAo"});
   });
+  
+//   GoogleMaps.create({
+//   name: 'exampleMap',
+//   element: document.getElementById('exampleMap'),
+//   options: {
+//     center: new google.maps.LatLng(-37.8136, 144.9631),
+//     zoom: 8
+//   }
+// });
 
   Template.map.onCreated(function() {
     var self = this;
