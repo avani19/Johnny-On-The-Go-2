@@ -20,7 +20,6 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
-iron:router
 accounts-ui
 
 fourseven:scss
@@ -36,4 +35,6 @@ browser-policy-framing@1.0.12
 alanning:roles
 cunneen:accounts-admin-materializecss
 dburles:google-maps
-mdg:geolocation
+session
+jaymc:google-reverse-geocode
+iron:router
