@@ -1,0 +1,16 @@
+<template name="mapView">
+  <div class="map-wrapper aligner">
+    <div class="map-container">
+      {{> googleMap name="map" options=mapOptions}}
+    </div>
+   <!--  <div id="prof">
+      {{> profile}}
+    </div> -->
+   <!--  <div class="map-loader aligner-item">
+      {{> loading}}
+    </div> -->
+  </div>
+  {{> mapForm}}
+  {{> imageModal}}
+  <p class="address">{{address}}</p>
+</template>

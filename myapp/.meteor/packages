@@ -36,3 +36,5 @@ alanning:roles
 cunneen:accounts-admin-materializecss
 dburles:google-maps
 mdg:geolocation
+session
+jaymc:google-reverse-geocode

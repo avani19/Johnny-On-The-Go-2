@@ -1,0 +1,14 @@
+.map-container {
+  width: 50%;
+  max-width: 50%;
+  height: 500px;
+  float: left;
+  z-index: 1;
+}
+
+
+.map-loader{
+  width: 90%;
+  position: absolute;
+  z-index: 0;
+}

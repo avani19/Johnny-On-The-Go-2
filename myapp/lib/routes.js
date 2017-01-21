@@ -1,3 +1,5 @@
+//var Router = require();
+
 // In the configuration, we declare the layout, 404, loading,
 // navbar, and footer templates.
 Router.configure({
@@ -13,9 +15,9 @@ Router.configure({
 // In the map, we set our routes.
 Router.map(function () {
   // Index Route
-  this.route('map', {
+  this.route('home', {
     path: '/',
-    template: 'map',
+    template: 'home',
     layoutTemplate: 'masterLayout'
   });
   this.route('loading', {
@@ -23,7 +25,13 @@ Router.map(function () {
     template: 'loading',
     layoutTemplate: 'masterLayout'
   });
-  // User Mgmt Route
+  //Profile Route
+  this.route('profile', {
+    path: 'profile',
+    template: 'profile',
+    layoutTemplate: 'masterLayout'
+  });
+  // // User Mgmt Route
   this.route('usermgmt', {
     path: '/usermgmt',
     template: 'userManagement',
@@ -44,7 +52,7 @@ Router.map(function () {
       path: '/sign-in',
       template: 'signIn',
       layoutTemplate: 'masterLayout',
-      redirect: '/',
+      redirect: '/profile',
   });
   // Sign Up Route
   AccountsTemplates.configureRoute('signUp', {
