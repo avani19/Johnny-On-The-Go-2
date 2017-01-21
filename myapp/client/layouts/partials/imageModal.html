@@ -1,32 +1,13 @@
 <template name="imageModal">
   <div id="imageModal" class="modal">
-    <div class="modal-content">
-      <h4>Reviews</h4>
-      <!-- <img id="modalImage" class="full-w" src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiyx-Hh09PRAhWPdSYKHfb4DzkQjRwIBw&url=http%3A%2F%2Flogosociety.blogspot.com%2F2011%2F11%2Fhappy-toilet.html&psig=AFQjCNHMRRA_lQh-s_aHO8TIW-paT7WcHQ&ust=1485102379324364"> -->
-          <div class="container">
-            <div class="row">
-              <form class="col s6">
-                <div class="row">
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s6">
-                    <i class="small material-icons prefix">mode_edit</i>
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Your Comment</label>
-                  </div>
-                </div>
-                <!-- <a class="waves-effect waves-light btn">button</a> -->
-              </form>
-            </div>
-          </div>
-        </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-    </div>
+     <div class="modal-content">
+      <!-- <h4>Reviews</h4> -->
+
+      {{> comments}}
+
+
+
   </div>
+</div>
+
 </template>
