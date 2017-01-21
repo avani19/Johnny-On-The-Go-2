@@ -1,0 +1,15 @@
+<template name="mapView">
+  {{> navbar}}
+  <div class="map-wrapper aligner">
+    <div class="map-container">
+      {{> googleMap name="map" options=mapOptions}}
+    </div>
+    <div class="map-loader aligner-item">
+      {{> mapLoader}}
+    </div>
+  </div>
+  {{> mapForm}}
+  {{> imageModal}}
+  <p class="address">{{address}}</p>
+  {{> footer}}
+</template>
