@@ -107,10 +107,8 @@ Template.mapView.helpers({
       return {
         center: new google.maps.LatLng(64.200841, -149.493673),
         zoom: 10,
-        disableDefaultUI: true,
-        // styles: mapStyles.blueEssence,
-        // styles: mapStyles.cleanBnW,
-        styles: mapStyles.tkoWebsiteRedesign,
+        // disableDefaultUI: true,
+        styles: mapStyles.nightMode,
       };
     }
   },
