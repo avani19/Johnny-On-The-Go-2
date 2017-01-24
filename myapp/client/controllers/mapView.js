@@ -32,9 +32,9 @@ function initializeMapAndMarkers(){
       added: function(document) {
         // create an image for this marker
         var image = {
-          url: document.image,
+          url: "./marker.png",
           // This marker is 20 pixels wide by 32 pixels high.
-          size: new google.maps.Size(20, 32),
+          size: new google.maps.Size(35, 32),
           // The origin for this image is (0, 0).
           origin: new google.maps.Point(0, 0),
           // The anchor for this image is the base of the flagpole at (0, 32).
