@@ -9,7 +9,11 @@ Template.comments.events = {
       paidOrFree: paidOrFree,
       timesOpen: timesOpen,
       publicBusiness: publicBusiness,
-      comments: comments
+      comments: comments,
+      users: {
+        _id: Meteor.user().id,
+        email: Meteor.user().email[0].address
+      }
     });
     $('#paidOrFree, #timesOpen, #publicBusiness, #comments').val('');
     Modal.hide('imageModal');
