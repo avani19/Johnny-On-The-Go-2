@@ -6,7 +6,7 @@ Template.mapForm.events({
     Markers.insert({
       lat: position.lat,
       lng: position.lng,
-      image: 'https://i.ytimg.com/vi/czhDhxFfZsM/maxresdefault.jpg',
+      image: './marker.png',
     });
   }
 });
