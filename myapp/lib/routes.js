@@ -29,7 +29,13 @@ Router.map(function () {
   this.route('profile', {
     path: 'profile',
     template: 'profile',
-    layoutTemplate: 'masterLayout'
+    layoutTemplate: 'masterLayout',
+    waitOn: function(){
+      var collections = [
+        Meteor.subscribe('posts')
+      ];
+      return collections;
+    }
   });
   // // User Mgmt Route
   this.route('usermgmt', {

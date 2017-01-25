@@ -3,8 +3,12 @@
     <div class="row">
       <div class="col s12">
         <h2>Profile</h2>
-        
+
       </div>
     </div>
   </div>
+  {{#each post}}
+    <p>{{this.title.body}}</p>
+  {{/each}}
+  {{> comments}}
 </template>

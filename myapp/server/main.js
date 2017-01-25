@@ -10,3 +10,7 @@ Meteor.startup(() => {
     Roles.addUsersToRoles(Meteor.settings.adminId, ['admin']);
   }
 });
+
+Meteor.publish("posts", function () {
+  return Posts.find();
+})

@@ -1,13 +1,13 @@
-Template.comments.events = {
-  'click #submit' : function(event){
+Template.comments.events = ({
+  "click #newPost" : function(event){
     event.preventDefault();
-    var title = $('#title').val();
-    var body = $('#body').val();
-    markers.insert({
-      title: title,
-      body: body
+
+    MeteorCamera.getPicutres(function (err, data) {
+      if (!err) {
+        Meteor.call("addPost", data);
+      }
     });
-    $('#title, #body').val('');
-    Modal.hide('imageModal');
+
+    return false;
   }
-}
+});
