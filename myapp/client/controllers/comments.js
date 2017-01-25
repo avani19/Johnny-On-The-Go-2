@@ -3,10 +3,11 @@ Template.comments.events = {
     event.preventDefault();
     var title = $('#title').val();
     var body = $('#body').val();
-    comments.insert({
+    markers.insert({
       title: title,
       body: body
     });
     $('#title, #body').val('');
+    Modal.hide('imageModal');
   }
 }
