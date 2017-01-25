@@ -20,11 +20,11 @@ Router.map(function () {
     template: 'home',
     layoutTemplate: 'masterLayout'
   });
-  this.route('loading', {
-    path: 'loading',
-    template: 'loading',
-    layoutTemplate: 'masterLayout'
-  });
+  // this.route('loading', {
+  //   path: 'loading',
+  //   template: 'loading',
+  //   layoutTemplate: 'masterLayout'
+  // });
   //Profile Route
   this.route('profile', {
     path: 'profile',
