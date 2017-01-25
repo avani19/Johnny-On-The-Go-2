@@ -7,6 +7,10 @@ Template.mapForm.events({
       lat: position.lat,
       lng: position.lng,
       image: './marker.png',
+      paidOrFree: paidOrFree,
+      timesOpen: timesOpen,
+      publicBusiness: publicBusiness,
+      comments: comments
     });
   }
 });
