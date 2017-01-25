@@ -5,7 +5,7 @@ Template.comments.events = {
     var timesOpen = $('#timesOpen').val();
     var publicBusiness = $('#publicBusiness').val();
     var comments = $('#comments').val();
-    markers.insert({
+    Markers.insert({
       paidOrFree: paidOrFree,
       timesOpen: timesOpen,
       publicBusiness: publicBusiness,
