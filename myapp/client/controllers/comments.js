@@ -11,11 +11,11 @@ Template.comments.events = {
       publicBusiness: publicBusiness,
       comments: comments,
       users: {
-        _id: Meteor.user().id,
+        _id: Meteor.userId(),
         email: Meteor.user().emails[0].address
       }
     });
     $('#paidOrFree, #timesOpen, #publicBusiness, #comments').val('');
-    imageModal.hide('imageModal');
+    $('#imageModal').closeModal();
   }
 }
