@@ -1,12 +1,8 @@
-<template name="mapView">
+<!-- <template name="mapView">
   <div class="map-wrapper aligner">
-  <!-- <div class='card-panel yellow darken-1 col s12 center-align'> -->
-    <!-- <div class='card-panel left-align white'> -->
     <div class="map-container">
       {{> googleMap name="map" options=mapOptions}}
     </div>
-    <!-- </div> -->
-  <!-- </div> -->
     <div class="map-loader aligner-item">
       {{> loading}}
     </div>
@@ -14,4 +10,26 @@
   {{> mapForm}}
   {{> imageModal}}
   <p class="address">{{address}}</p>
+</template> -->
+<template name="mapView">
+  <div class="map-wrapper aligner">
+    <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+    </div>
+    <div class="card" id="add">
+    <div class="card-content">
+     <span class="card-title">Current Location:</span>
+     <p>{{address}}</p>
+     </div>
+     <div class="card-action">
+     {{> mapForm}}
+     </div>
+     </div>
+     <img src="./bg.png">
+    <div class="map-loader aligner-item">
+      {{> loading}}
+    </div>
+  </div>
+  
+  {{> imageModal}}
 </template>
