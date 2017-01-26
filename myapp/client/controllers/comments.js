@@ -5,17 +5,17 @@ Template.comments.events = {
     var timesOpen = $('#timesOpen').val();
     var publicBusiness = $('#publicBusiness').val();
     var comments = $('#comments').val();
-    markers.insert({
+    Markers.insert({
       paidOrFree: paidOrFree,
       timesOpen: timesOpen,
       publicBusiness: publicBusiness,
       comments: comments,
       users: {
         _id: Meteor.user().id,
-        email: Meteor.user().email[0].address
+        email: Meteor.user().emails[0].address
       }
     });
     $('#paidOrFree, #timesOpen, #publicBusiness, #comments').val('');
-    Modal.hide('imageModal');
+    imageModal.hide('imageModal');
   }
 }
