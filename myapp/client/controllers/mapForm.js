@@ -23,6 +23,7 @@ Template.mapForm.events({
       // timesOpen: timesOpen,
       // publicBusiness: publicBusiness,
       // comments: comments
+
     });
   }
 });
