@@ -6,7 +6,7 @@ function initializeMapAndMarkers(){
     var markers = {};
     // check for navigator to set center
     if (navigator.geolocation) {
-      console.log("Saw navigator pulling location...")
+      console.log("Pulling location...")
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
           lat: position.coords.latitude,
