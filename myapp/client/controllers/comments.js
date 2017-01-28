@@ -38,25 +38,25 @@ Template.comments.events = {
     //    Markers.update($push: comments: newComment )
     //||  Markers.update(comments: $push: // I can't remember syntax check mongodocs for find and update or upsert
     // })
-    Markers.findOne(_id: targetMarkerId)
-      .then(function(Markers){
-        Markers.findOneAndUpdate({
-          comments: newComment
-        })
-        Markers.findOneAndUpdate({
-          comments: comments
-        });
-    });
-
-    Markers.insert({
-      paidOrFree: paidOrFree,
-      timesOpen: timesOpen,
-      publicBusiness: publicBusiness,
-      users: {
-        _id: Meteor.userId(),
-        email: Meteor.user().emails[0].address
-      }
-    });
+    // Markers.findOne(_id: targetMarkerId)
+    //   .then(function(Markers){
+    //     Markers.findOneAndUpdate({
+    //       comments: newComment
+    //     })
+    //     Markers.findOneAndUpdate({
+    //       comments: comments
+    //     });
+    // });
+    //
+    // Markers.insert({
+    //   paidOrFree: paidOrFree,
+    //   timesOpen: timesOpen,
+    //   publicBusiness: publicBusiness,
+    //   users: {
+    //     _id: Meteor.userId(),
+    //     email: Meteor.user().emails[0].address
+    //   }
+    // });
     $('#paidOrFree, #timesOpen, #publicBusiness, #comments').val('');
     $('#imageModal').closeModal();
   }
