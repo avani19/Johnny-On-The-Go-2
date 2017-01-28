@@ -1,0 +1,31 @@
+<template name="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2>Profile</h2>
+        <h3>Recent Activity:</h3>
+        <h4>
+          Address:
+        </h4>
+        <p>
+          Paid or Free: Free
+        </p>
+        <p>
+          Times Open: 6:30 pm to 9:30 pm
+        </p>
+        <p>
+          Public or Business: Business
+        </p>
+        <p>
+          Comments:
+        </p>
+        <p>
+          The bathrooms are super clean.
+        </p>
+      </div>
+    </div>
+  </div>
+  {{#each marker}}
+    <p>{{this.comments}}</p>
+  {{/each}}
+</template>
