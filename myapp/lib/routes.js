@@ -52,7 +52,7 @@ Router.map(function () {
       path: '/sign-in',
       template: 'signIn',
       layoutTemplate: 'masterLayout',
-      redirect: '/profile',
+      redirect: '/',
   });
   // Sign Up Route
   AccountsTemplates.configureRoute('signUp', {
