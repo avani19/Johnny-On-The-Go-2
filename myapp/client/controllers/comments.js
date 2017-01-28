@@ -10,7 +10,7 @@
 //     $('#title, #body').val('');
 //   }
 // }
-Template.comments.events = {
+Template.comments.events({
   'click #submit' : function(event){
     event.preventDefault();
     var paidOrFree = $('#paidOrFree').val();
@@ -30,4 +30,4 @@ Template.comments.events = {
     $('#paidOrFree, #timesOpen, #publicBusiness, #comments').val('');
     $('#imageModal').closeModal();
   }
-}
+});
