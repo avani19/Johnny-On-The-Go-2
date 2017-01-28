@@ -1,23 +1,34 @@
-# Johnny-On-The-Go-2
-Final Project
+# Johnny-On-The-Go-2 :toilet:
 
-For admin
-Visit http://localhost:3000/usermgmt in your browser. You should get kicked back to the index because of the Role protection in the routes onBeforeAction. The route is missing a template or two, but lets get in to see the error first.
+## Overview
 
-While logged in, paste the following into your console in chrome:
+When you gotta go, you gotta go!  
 
-Meteor.userId();
-Put the ID somewhere for a moment. Meteor will likely refresh your console so save it in an empty document.
+But you can't just go anywhere.  For that there is Johnny on The Go.  This app will help you locate the highest quality restroom around you using Google Map
 
-In the root of your project, create a new file called settings.json. Put this in that file:
+Using your geolocation, the Johnny on The Go app will show you your current location and any nearby bathrooms. You will be able to login to the app to add your own review and even add your own markers to identify new restrooms.
 
-{
-  "adminId": "<THE ID YOU JUST GOT FROM THE CHROME CONSOLE>"
-}
-Go to the terminal, and stop the meteor server with ctrl+c.
+## Authors:
 
-We're going to restart it with our settings file and take care of creating our first admin user -- Us.
+1. [Ryan Seery] (https://github.com/ryanseery) : Backend/Frontend
+2. [Avani Ghetia] (https://github.com/avani19) : Backend/Frontend
+3. [Kevin Ding] (https://github.com/kmding) : Research/Presentation 
+4. [Masud Chowdhury] (https://github.com/masudhchowdhury): Pre-production
 
-Use the following command to start meteor:
+---
+## Technologies And Resources:
 
-meteor run --settings settings.json
+- HTML, CSS, JavaScript, Jquery
+- Meteor
+- MongoDB and Robomongo
+- Materializecss
+- Reactive Google Map
+- Custome Style Google Map
+
+---
+## Meteor packages
+
+- dburles:google-maps
+- session
+- jaymc:google-reverse-geocode
+- mdg:geolocation

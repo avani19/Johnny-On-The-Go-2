@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <div class="nav-wrapper">
+          <div class="nav-wrapper transperant">
             <a href="/" class="brand-logo">Johnny on the Go 2 </a>
             <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -11,6 +11,7 @@
                 <li><a href="/usermgmt">User Management</a></li>
               {{/if}}
               {{#if currentUser}}
+                <li><a href='/'>Home</a></li>
                 <li><a href='/profile'>Profile</a></li>
                 <li><a href="/sign-out">Sign Out</a></li>
               {{else}}
@@ -22,6 +23,7 @@
                 <li><a href="/usermgmt">User Management</a></li>
               {{/if}}
               {{#if currentUser}}
+                <li><a href='/'>Home</a></li>
                 <li><a href="/profile">Profile</a></li>
                 <li><a href="/sign-out">Sign Out</a></li>
               {{else}}
